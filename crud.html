@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hatim CRUDS Project</title>
+</head>
+<body>
+    <div class="crud">
+        <header class="head">
+            <h2>CRUDS</h2>
+            <p>PRDUCT MANAGMENT SYSTEM</p>
+        </header>
+
+        <div class="inputs">
+            <input placeholder="title" type="text" id="title">
+            <div class="input-container">
+                <input onkeyup="getTotal()" placeholder="price" type="number" id="price">
+                <input onkeyup="getTotal()" placeholder="taxes" type="number" id="taxes">
+                <input onkeyup="getTotal()" placeholder="ads" type="number" id="ads">
+                <input onkeyup="getTotal()" placeholder="discount" type="number" id="discount">
+                <small id="total">00</small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnSearch">
+                    <button onclick="getsearchMood(this.id)" id="searchTitle">Search by Title</button>
+                    <button onclick="getsearchMood(this.id)" id="searchCategory">Search by Category</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="deleteAll">
+            
+        </div>
+
+        <table> 
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+
+                <tbody id="tbody">
+                </tbody>
+            </tr>
+        </table>
+
+
+
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
